@@ -1,3 +1,4 @@
+console.log('🎮 بدء تحميل اللعبة...');
 // game.js - المحرك الرئيسي المحسن
 class SurvivalGame {
     constructor() {
@@ -667,5 +668,6 @@ document.addEventListener('visibilitychange', () => {
     } else if (window.game) {
         // استئناف اللعبة
         window.game.startGameLoop();
+    
     }
 });
