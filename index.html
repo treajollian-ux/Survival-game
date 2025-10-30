@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Day Survival - لعبة البقاء</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <!-- واجهة اللعبة -->
+        <div id="ui">
+            <div class="stats">
+                <div class="health">❤️ الصحة: <span id="healthValue">100</span></div>
+                <div class="resources">
+                    <span>🪵 <span id="woodCount">0</span></span>
+                    <span>🪨 <span id="stoneCount">0</span></span>
+                    <span>🍖 <span id="foodCount">0</span></span>
+                </div>
+            </div>
+            
+            <div id="buildMenu" class="hidden">
+                <h3>أنظمة البناء</h3>
+                <div class="build-options">
+                    <button data-type="wall">🧱 جدار</button>
+                    <button data-type="floor">🪵 أرضية</button>
+                    <button data-type="door">🚪 باب</button>
+                    <button data-type="chest">📦 صندوق</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- تحكم الموبايل -->
+        <div id="mobileControls">
+            <div class="joystick-area" id="movementJoystick">
+                <div class="joystick"></div>
+            </div>
+            <div class="action-buttons">
+                <button id="actionBtn">⚡</button>
+                <button id="buildBtn">🔨</button>
+                <button id="inventoryBtn">🎒</button>
+            </div>
+        </div>
+
+        <!-- الخريطة المصغرة -->
+        <div id="miniMap">
+            <canvas id="mapCanvas"></canvas>
+        </div>
+    </div>
+
+    <!-- المكتبات -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <!-- وحدات اللعبة -->
+    <script src="modules/player.js"></script>
+    <script src="modules/buildings.js"></script>
+    <script src="modules/resources.js"></script>
+    <script src="modules/ui.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
