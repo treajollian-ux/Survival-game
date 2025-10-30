@@ -1,5 +1,6 @@
+console.log('🔧 Service Worker محمل');
 // service-worker.js - لجعل التطبيق يعمل بدون اتصال
-const CACHE_NAME = 'survival-game-v1.0.0';
+const CACHE_NAME = 'survival-game-v1.0.1';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
